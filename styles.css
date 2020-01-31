@@ -1,0 +1,254 @@
+:root {
+    --color-green: #50fa7b;
+    --color-rocket: rgb(113, 89, 193);
+    --color-launch: rgb(253, 149, 31);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: black;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+header {
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0,0,0,0.1);
+}
+
+header div a {
+    color: rgb(22, 207, 22);
+    text-decoration: none;
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: var(--color-green);
+    transition: color 200ms;
+}
+
+#wrapper {
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img {
+    border-radius: 50%;
+    border: 3px solid var(--color-green);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper ul li {
+    list-style: none;
+}
+
+#empresa {
+    font-size: 50px;
+    color:var(--color-rocket);
+}
+
+#redes-sociais{
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+}
+
+#redes-sociais a {
+    color: white;
+    text-decoration: none;
+}
+
+#redes-sociais a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--color-green);
+} 
+
+/*=== COURSES ==*/
+.courses {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+    padding: 30px;
+}
+.course{
+    width: 414px;
+    background-color: rgb(11, 10, 13);
+    height: 600px;
+}
+
+.starter,
+.launch, 
+.gostack{
+    position:relative;
+    top:0;
+    transition:  all 0.2s ease 0s;
+}
+
+.modulo-starter {
+    color: var(--color-rocket);
+}
+
+.modulo-launch {
+    color: var(--color-launch);
+}
+
+.modulo-gostack {
+    color: var(--color-green);
+}
+
+.launch {
+    color: var(--color-launch);
+}
+
+.starter:hover  {
+    border: 2px solid var(--color-rocket);
+    border-radius: 8px;
+    transform: translateY(-7px);
+}
+
+.launch:hover {
+    border: 2px solid var(--color-launch);
+    border-radius: 8px; 
+    transform: translateY(-7px); 
+}
+
+.gostack:hover{
+    border: 2px solid var(--color-green);
+    border-radius: 8px; 
+    transform: translateY(-7px);
+}
+.course div {
+    padding: 40px;
+    height: 700px;
+}
+.course__image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.starter span {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    border: 2px solid var(--color-rocket);
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-rocket);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.launch span {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    border: 2px solid var(--color-launch);
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-launch);
+}
+
+.gostack span {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    border: 2px solid var(--color-green);
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--color-green);
+}
+
+.course__image-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 140px;
+}
+
+/*==MODAL==*/
+.modal-overlay{
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal{
+    color: black;
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.maximize{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+iframe{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
